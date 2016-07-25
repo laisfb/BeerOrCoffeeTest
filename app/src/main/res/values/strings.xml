@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BeerOrCoffee</string>
+
+    <string name="title">Cadastro</string>
+    <string name="name">Nome do local</string>
+    <string name="address">Endereço\n(Rua, Nº, Bairro, Cidade, UF, País)</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="available_drink">Bebida disponível:</string>
+    <string name="submit">Enviar</string>
+
+    <string name="location_description">Location Icon</string>
+    <string name="error_field_required">Campo obrigatório</string>
+
+    <string-array name="beer_or_coffee">
+        <item>-----</item>
+        <item>Cerveja</item>
+        <item>Café</item>
+        <item>Ambos</item>
+    </string-array>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/outer_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.laisbaumgratz.beerorcoffee.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/outer_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="@string/title"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginBottom="10dp"
+            android:text="@string/name"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_rectangle"
+            android:textSize="18sp"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name"
+            android:layout_marginBottom="10dp"
+            android:text="@string/address"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_address"
+            android:background="@drawable/rounded_rectangle"
+            android:textSize="18sp"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/et_address"
+            android:scrollbars="vertical"/>
+
+        <TextView
+            android:id="@+id/tv_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_address"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/latitude"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_latitude"
+            android:layout_toRightOf="@+id/tv_latitude"
+            android:layout_toEndOf="@+id/tv_latitude"
+            android:background="@drawable/rounded_rectangle"
+            android:textSize="18sp"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tv_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_latitude"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/longitude"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_longitude"
+            android:layout_toRightOf="@+id/tv_longitude"
+            android:layout_toEndOf="@+id/tv_longitude"
+            android:background="@drawable/rounded_rectangle"
+            android:textSize="18sp"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tv_beverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_longitude"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/available_drink"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/sp_beverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_beverage"
+            android:layout_toRightOf="@+id/tv_beverage"
+            android:layout_toEndOf="@+id/tv_beverage"
+            android:dropDownVerticalOffset="55dp"
+            style="@style/spinner_style"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_beverage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/submit"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:onClick="sendData"/>
+
+        <LinearLayout
+            android:id="@+id/dummy_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+    </RelativeLayout>
+</ScrollView>

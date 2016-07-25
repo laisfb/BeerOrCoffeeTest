@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_search_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_centerVertical="true"
+    android:gravity="center_vertical"
+    android:background="@drawable/rounded_layout">
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/location"
+        android:contentDescription="@string/location_description"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_location"
+        android:layout_toEndOf="@+id/iv_location">
+
+        <TextView
+            android:id="@+id/tv_search_address_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tv_search_address_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_search_address_1"
+            android:textSize="14sp"
+            android:textColor="#5e5e5e"
+            android:maxLines="1"/>
+    </RelativeLayout>
+
+</RelativeLayout>
